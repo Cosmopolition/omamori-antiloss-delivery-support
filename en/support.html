@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On Person · Support — your watch says so when you leave your phone behind. Common questions, the connection self-check, when it stays quiet, and why it doesn't cry wolf.">
+  <title>Support — On Person</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>没落下<span class="latin">On Person</span></a>
+    <nav class="lang-switch">
+      <a href="#" class="active">EN</a>
+      <a href="../zh/support.html">中文</a>
+      <a href="../ja/support.html">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">Support</span>
+      <h1>Your watch says so when you leave your phone behind</h1>
+      <p>On Person watches the Bluetooth link between your Apple Watch and your iPhone. You walk off, the phone doesn't follow, and your wrist buzzes first. Here's everything worth knowing.</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="#" class="active">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+
+    <section>
+
+      <p class="section-title">About On Person</p>
+      <div class="article">
+        <h2>It keeps an eye on things for the half-minute before you leave</h2>
+        <p>The phone is the easiest thing to forget on your way out. On Person does one thing: it watches the Bluetooth link between your Apple Watch and your iPhone. When the two drift apart and your watch notices first, it vibrates and shows a notification — so you turn around and pick up the phone you left behind while it's close by.</p>
+        <p>It doesn't locate you, doesn't know where you are, and doesn't talk to a server. The full boundaries are in the <a href="privacy.html">privacy policy</a>, with nothing hidden.</p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>Guarding</h3>
+          <p>An instrument panel: current signal strength, loss threshold, grace remaining, last heartbeat, phone battery. Every reading is on screen — no guesswork.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>Separation alert</h3>
+          <p>It waits out the grace period, then tells you when your phone was last with you — “31 seconds ago it was still with you.” One tap on the wrist puts it away.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>Silence policy</h3>
+          <p>Six rules decide when it should stay quiet: watch charging, phone charging, quiet hours, sleep mode, quieter once you're home, and a Focus mode check-up. Anything that happens during a quiet period is still recorded.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>Self-check</h3>
+          <p>Background refresh, Bluetooth, Watch permission, Focus mode prompt — the four things that must hold. All on one screen, with a one-tap fix.</p>
+        </div>
+
+      </div>
+
+      <p class="section-title">Common questions</p>
+
+      <details class="faq-item">
+        <summary>
+          Does it know where I am?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          No, and it doesn't want to. The signal strength it reads (RSSI) is a number from a radio: it answers “is that end still answering?”, not “which end is that?”. It doesn't request location permission, doesn't convert anything into a coordinate, and keeps no location history — the location tracking common in this category isn't in the app at all.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          What do I need to use it?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          An iPhone and an Apple Watch that are already paired. That's it — no account, no subscription, no server to connect to. The watch app asks for notification permission once, the first time it opens. Declining doesn't break anything else; you just won't get a banner on your wrist.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Why doesn't it always fire?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          Four kinds of reason, none of them a malfunction:
+          <br><br>
+          ① <strong>System Focus modes</strong> (Do Not Disturb, Sleep, Work) hold back ordinary notifications. We can't read whether Focus is on, so we can't promise it always gets through.
+          <br><br>
+          ② <strong>The background budget.</strong> The system wakes the watch only so often (roughly every 10–15 minutes), so with the screen off a real separation can take minutes to confirm.
+          <br><br>
+          ③ <strong>A silence rule is in effect:</strong> watch charging, phone charging, quiet hours, sleep mode, home noise suppression. In those cases it records instead of bothering you.
+          <br><br>
+          ④ <strong>You're still in the grace period.</strong> A weak signal starts a grace period first; if the link comes back inside it, nothing happens.
+          <br><br>
+          The Connection self-check in the app tells you which one you're hitting.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          How do I make it fire as reliably as possible?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          Three things, and the Connection self-check checks all of them:
+          <br><br>
+          ① Turn on <strong>Time Sensitive</strong> in System Settings › Notifications › On Person. Only then can a notification break through Focus.
+          <br><br>
+          ② Keep <strong>Background App Refresh</strong> on (System Settings › General › Background App Refresh).
+          <br><br>
+          ③ Make sure your <strong>watch is connected</strong> to the iPhone and has enough battery.
+          <br><br>
+          If it still stays quiet after all that, you're hitting a silence rule — not a broken app.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Will it cry wolf?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          There are two gates. First the <strong>grace period</strong>: after the signal weakens it waits (30 seconds by default), and if the link comes back inside that window nothing happens. Second the <strong>threshold</strong>: −72 dBm by default, so the signal has to get genuinely weak. Both numbers are adjustable in Settings.
+          <br><br>
+          And separation isn't "any disconnect": while backgrounded, only a genuinely weak signal counts. Not hearing a broadcast at all does not (the system often suspends the watch's own scanning in the background).
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          How does it recover afterwards?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          Two ways, neither of which involves taking your phone out:
+          <br><br>
+          ① You come back to your phone — tap “I'm back” on your wrist and it's put away immediately; or tap “Keep guarding 3 min” to reset the grace period.
+          <br><br>
+          ② You ignore it — the Watch <strong>reconnects on its own</strong> and writes the automatic recovery into your history. So you can see that it recovered, not just that it fired.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          What's in the history, and what can I see?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          Each entry holds four things: a random ID, the moment, the kind of event, and one short note. There are nine kinds of event (signal weak entering grace, grace ended and alert fired, recorded during a quiet period, auto-reconnect succeeded, you came back to your phone, keep guarding, started guarding, stopped guarding, make my phone ring).
+          <br><br>
+          <strong>No location. No signal history. No advertising identifier.</strong> Up to 50 entries, newest pushes out oldest, clearable whenever you like.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Does it need a network connection or an account?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          Neither. There's no account system and no server, there is no network request anywhere in the app, and no analytics SDK, crash reporter or ad SDK is linked in. The only outbound communication is the App Store purchase and restore, handled entirely by Apple's own framework.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Which languages are supported? Do the watch and complications follow?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          中文, English and 日本語 — pick one in Settings › Language.
+          <br><br>
+          It takes effect <strong>right away</strong>, and the watch face and the complications follow too: the language is pushed to the watch over WatchConnectivity, so you never have to set it a second time on the watch itself.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          When exactly does the app not work?
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          We'd rather you know the limits before you rely on them:
+          <br><br>
+          · Background scans get about 5 chances a day — not continuous listening.
+          <br>
+          · An alert repeats about 5 times over roughly 4 minutes; watchOS won't let apps vibrate in the background.
+          <br>
+          · Proximity is judged from the system Bluetooth stack, so a disconnect isn't caught the instant it happens.
+          <br>
+          · System Focus modes will hold back our alerts, and we can't read whether Focus is on.
+          <br>
+          · With the screen off, a real separation can take minutes to confirm.
+          <br><br>
+          The full section is on the “Privacy &amp; limits” screen inside the app, and in the <a href="privacy.html">privacy policy</a>.
+        </div>
+      </details>
+
+      <div class="contact-section">
+        <h2>Still stuck?</h2>
+        <p>We read every email, and we answer every one.</p>
+        <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ Email us</a>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 On Person Studio · Your data stays on your device · <a href="mailto:peer2peer.wang@gmail.com">Contact us</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

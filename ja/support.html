@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="いっしょ · サポート ── スマホを忘れても、腕時計が先に知らせます。よくある質問、接続セルフチェック、鳴らないとき、誤報しない理由。">
+  <title>サポート — いっしょ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>いっしょ<span class="latin">On Person</span></a>
+    <nav class="lang-switch">
+      <a href="../en/support.html">EN</a>
+      <a href="../zh/support.html">中文</a>
+      <a href="#" class="active">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">サポート</span>
+      <h1>スマホを忘れても、腕時計が先に知らせます</h1>
+      <p>「いっしょ」は Apple Watch と iPhone のあいだの Bluetooth リンクを見張ります。あなたが立ち去ってスマホが置いていかれるとき、最初に動くのは手首です。使う前に知っておいていただきたいことをここにまとめました。</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="#" class="active">サポート</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+
+    <section>
+
+      <p class="section-title">「いっしょ」について</p>
+      <div class="article">
+        <h2>家出る前の半分の 1 分を、代わりに見ておく</h2>
+        <p>外出時にありがちに忘れるのはスマホです。「いっしょ」がやることはひとつ。Apple Watch と iPhone のあいだの Bluetooth リンクを見張ります。離れて腕時計が先に気づけば、振動して通知を出す ── 気が済むうちに、置いてきたスマホを拾い戻せます。</p>
+        <p>位置は取得しません。サーバーともつなぎません。境界はすべて<a href="privacy.html">プライバシーポリシー</a>に書いてあります。隠した部分はありません。</p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>ガード中</h3>
+          <p>計器のパネル。現在の信号、しきい値、猶予の残り、最終ハートビート、バッテリー ── すべて読み値として画面に出ます。勘に頼りません。</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>分離アラート</h3>
+          <p>猶予が終わってから鳴り、スマホが最後にそばにあった時刻を伝えます ──「31 秒前まではそばにありました」。手首で 1 タップで解除できます。</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>ミュート方針</h3>
+          <p>6 つのルールが「今は鳴る必要がない」を決めます：腕時計の充電中、スマホの充電中、静穏時間、スリープモード、帰宅後の静かさ、集中モードの点検。静かな時間に起きたことも記録されます。</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="mark"></span>
+          <h3>セルフチェック</h3>
+          <p>バックグラウンド App リフレッシュ、Bluetooth、腕時計の権限、集中モード ── アラートが鳴るために必要な 4 つを 1 画面に並べ、壊れていればワンタップで直します。</p>
+        </div>
+
+      </div>
+
+      <p class="section-title">よくある質問</p>
+
+      <details class="faq-item">
+        <summary>
+          私がどこにいるか、わかりますか？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          わかりませんし、わかるつもりもありません。App が読む信号強度（RSSI）は無線の数値で、「向こうがまだ応えるか」には答えられても、「向こうがどこにあるか」には答えられません。位置権限は要求せず、座標への換算もせず、位置履歴も残しません ── このカテゴリー常见的「位置トラッキング」は App に存在しません。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          使うのに必要なものは？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          iPhone と、ペアリング済みの Apple Watch。それだけです ── アカウントもサブスクも接続するサーバーも要りません。腕時計側は初回起動時に 1 度だけ通知の許可を尋ねます。断っても他の機能には影響せず、手首に通知が出るだけになりません。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          なぜ鳴らないことがありますか？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          故障ではありません。理由は 4 つあります。
+          <br><br>
+          ① <strong>OS の集中モード</strong>（おやすみ / 睡眠 / 仕事）が通常の通知を保留します。有効かどうかを読み取る API は公開されていないため、必ず届くとはお約束できません。
+          <br><br>
+          ② <strong>バックグラウンドの予算</strong>。OS が腕時計を起こす回数は限られていて（おおよそ 10〜15 分ごと）、画面オフのあいだに本物の分離を確認するのに数分かかることがあります。
+          <br><br>
+          ③ <strong>ミュートルールが効いている</strong>：腕時計の充電中、スマホの充電中、静穏時間、スリープモード、帰宅後の静かさ ── このときは記録だけして起こしません。
+          <br><br>
+          ④ <strong>まだ猶予の中</strong>。信号が弱くなっても、まず猶予のあいだに戻れば何もおきません。
+          <br><br>
+          どれに当たっているかは、App の「接続セルフチェック」が直接教えてくれます。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          できるだけ確実に鳴くようにするには？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          3 つ。App の「接続セルフチェック」が 1 つずつ確認します。
+          <br><br>
+          ① システム設定 › 通知 › いっしょ で<strong>「時間敏感」</strong>を有効にする。これがないと集中モードを貫通できません。
+          <br><br>
+          ② <strong>バックグラウンド App リフレッシュ</strong>をオンにしておく（システム設定 › 一般 › バックグラウンド App リフレッシュ）。
+          <br><br>
+          ③ <strong>腕時計が iPhone と繋がっている</strong>こと、電池が足りていること。
+          <br><br>
+          それでも静かなら、それは故障ではなくミュートルールです。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          誤報は起きませんか？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          関門が 2 つあります。ひとつは<strong>猶予時間</strong> ── 信号が弱くなってから待つ期間（既定 30 秒）で、そのあいだに戻れば何もおきません。もうひとつは<strong>しきい値</strong> ── 既定 −72 dBm で、信号が実際に弱くなって分離として扱われます。どちらも設定で変えられます。
+          <br><br>
+          さらに、分離＝「切れた瞬間に報」は ありません。バックグラウンドでは信号が実際に弱い場合だけが分離で、放送が聞こえないこと自体は分離になりません（バックグラウンドでは OS が腕時計自身のスキャンを保留することがあります）。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          鳴ったあとの復帰はどうなりますか？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          2 つあり、どちらもスマホを取り出す必要がありません。
+          <br><br>
+          ① スマホのもとに戻った ── 手首で「戻った」をタップすればすぐ解除。「3 分間ガードを続ける」で猶予もリセットできます。
+          <br><br>
+          ② そのままにした ── 腕時計が<strong>自動で再接続</strong>し、その自動復帰を履歴に残します。「鳴った」だけでなく「回復した」が見えるのはこのためです。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          「履歴」には何が入りますか？何が見られますか？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          1 件につき 4 つです。ランダムな ID、時刻、イベント種別、短い補足。イベント種別は 9 種類（信号弱・猶予へ、猶予終了でアラート、静穏期間中の記録、自動で再接続成功、スマホのそばに戻った、ガードを続ける、ガード開始、ガード停止、スマホを鳴らす）。
+          <br><br>
+          <strong>位置も、信号の履歴も、広告識別子もありません。</strong>最大 50 件で古いものから押し出され、いつでも消せます。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          通信やアカウント登録は必要ですか？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          どちらも要りません。アカウントもサーバーもなく、App のコードにはネットワーク通信が一切なく、解析 SDK・クラッシュ報告・広告 SDK も組み込まれていません。唯一の外部との通信は App Store の購入と復元で、これはすべて Apple のフレームワークが行います。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          どの言語に対応していますか？腕時計とコンプリケーションも？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          中文・English・日本語の 3 言語。App の「設定 › 言語」で選びます。
+          <br><br>
+          選ぶと<strong>すぐに反映</strong>され、腕時計とコンプリケーションも一緒に切り替わります。言語設定は WatchConnectivity で腕時計に送られるので、腕時計側で設定し直す必要はありません。
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          この App はどんなときに効きませんか？
+          <span class="arrow">▼</span>
+        </summary>
+        <div class="answer">
+          頼る前に、できることとできないことを先に書いておきます。
+          <br><br>
+          · バックグラウンドのスキャンは 1 日に約 5 回だけです。終日じゅうの監視ではありません。
+          <br>
+          · アラートはおよそ 4 分間に 5 回まで。watchOS は App がバックグラウンドで振動し続けることを認めていません。
+          <br>
+          · 判定できるのは OS の Bluetooth リンクの状態だけです。切断の正確な時刻は保証できません。
+          <br>
+          · OS の集中モードは通知を保留します。有効かどうかを読み取る API は公開されていません。
+          <br>
+          · 画面オフの間、本物の分離の確認には数分かかることがあります。
+          <br><br>
+          全文は App 内の「プライバシーと境界」と<a href="privacy.html">プライバシーポリシー</a>にあります。
+        </div>
+      </details>
+
+      <div class="contact-section">
+        <h2>解決しませんでしたか？</h2>
+        <p>メールは 1 通ずつ読み、1 通ずつ返信します。</p>
+        <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ メールで問い合わせる</a>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 On Person Studio · データはあなたの端末にのみ保存されます · <a href="mailto:peer2peer.wang@gmail.com">お問い合わせ</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

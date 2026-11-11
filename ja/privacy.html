@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="いっしょ · プライバシーポリシー — 収集せず、アップロードせず、通信もしません。位置権限は要求しません。イベント記録は端末内にのみ保存され、最大 50 件です。">
+  <title>プライバシーポリシー — いっしょ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>いっしょ<span class="latin">On Person</span></a>
+    <nav class="lang-switch">
+      <a href="../en/privacy.html">EN</a>
+      <a href="../zh/privacy.html">中文</a>
+      <a href="#" class="active">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">プライバシーポリシー</span>
+      <h1>この App はあなたのデータに触れません</h1>
+      <p>「いっしょ」が見張るのは、Apple Watch と iPhone のあいだの Bluetooth リンクひとつです。通信はせず、個人情報を収集せず、位置権限も要求しません。以下が、この端末に何が残るかのすべてです。</p>
+      <p class="updated">発効日 2026-11-12　·　対象バージョン 1.0　·　iOS / watchOS</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html" class="active">プライバシーポリシー</a>
+      <a href="support.html">サポート</a>
+    </nav>
+
+    <section>
+
+      <p class="section-title">1 · 明確にやっていないこと</p>
+      <div class="article">
+        <ul>
+          <li><strong>個人情報を収集しません。</strong>アカウントも、メールアドレスも、電話番号も、端末識別子も、広告識別子（IDFA）もありません。</li>
+          <li><strong>アップロードも通信もしません。</strong>App のコードにはネットワーク通信が一切ありません。「送信しない」と宣言しているのではなく、そのコードが存在しないという事実です。</li>
+          <li><strong>位置を読み取りません。</strong>位置権限を要求せず、座標に変換せず、位置履歴も保存しません。</li>
+          <li><strong>サードパーティ SDK はゼロです。</strong>解析・クラッシュ報告・広告 SDK・バックエンドサーバのいずれもありません。</li>
+        </ul>
+        <div class="note-box">
+          <strong>唯一の例外は App Store の購入と復元です。</strong>この処理は Apple のシステムフレームワーク（StoreKit）がすべて担い、Apple ID や支払い情報、請求書にアクセスすることはありません。読み取ることもありません。
+        </div>
+      </div>
+
+      <p class="section-title">2 · 端末に残るもの</p>
+      <div class="article">
+        <p>すべて端末ローカルの <strong>App Group コンテナ</strong>（<code>group.com.nearby.antiloss</code>）に保存され、iPhone と腕時計で同じひとつを共有します。3 種類の内容をあわせても数十 KB に収まります。</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>端末に残るもの</th><th>目的</th><th>期間</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>イベント記録<br>（最大 50 件）</td>
+              <td>「鳴った」「自動で復帰した」「静かな時間に記録された」を後から確認できるようにするため</td>
+              <td>ローリングで上限 50 件。新しい記録が最古の記録を押し出します</td>
+            </tr>
+            <tr>
+              <td>設定<br>（しきい値、猶予、静穏時間、スリープモード、テーマ、言語）</td>
+              <td>好みを覚えておき、毎回設定し直さなくて済むようにするため</td>
+              <td>変更するか、App を削除するまで</td>
+            </tr>
+            <tr>
+              <td>ガード状態<br>（現在の信号、しきい値、猶予、最終ハートビート、バッテリー）</td>
+              <td>画面に表示する読み値</td>
+              <td><strong>現在の値だけ</strong>を保存。履歴の曲線は保存しません</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>イベント記録の中身</h3>
+        <p>1 件につき 4 つだけです。ランダムな ID、発生した時刻、イベント種別（計 9 種：信号弱・猶予へ、猶予終了でアラート、静穏期間中の記録、自動で再接続成功、スマホのそばに戻った、ガードを続ける、ガード開始、ガード停止、スマホを鳴らす）、そして短い補足（「腕時計が充電中」など）。</p>
+        <div class="note-box warn">
+          <strong>含まれないもの：</strong>座標も、あなたがいた履歴も、信号強度の時系列、端末の一覧、広告識別子、どの App を開いたかの記録。
+        </div>
+      </div>
+
+      <p class="section-title">3 · 要求する権限は 2 つだけ</p>
+      <div class="article">
+        <h3>Bluetooth（常に）</h3>
+        <p>iPhone と Apple Watch が互いを探し合い、その Bluetooth リンクで「まだ一緒にいるか」を判断します。OS の用途説明はそのまま「あなたが離れたときに、腕時計がスマホが同じ部屋にあることに気づけるようにするため」です。この権限がないと App は動きません。</p>
+        <h3>通知（腕時計側のみ）</h3>
+        <p>離れたときに手首で振動し通知を出します。<strong>集中モードを貫通する</strong>（時間敏感）設定は選べますが、App が使うのはご自身がシステム設定で有効にしたときだけ。既定では使いません。OS は集中モードの有効・無効を公開していないため、通知が必ず届くとはお約束できません。</p>
+        <h3>要求しない権限</h3>
+        <ul>
+          <li>位置（Always / When In Use）── 要求しません</li>
+          <li>カメラ、マイク、写真、連絡先 ── 要求しません</li>
+          <li>トラッキング（App Tracking Transparency / IDFA）── 要求しませんし、使いません</li>
+          <li>健康、音声認識、キーボード ── 要求しません</li>
+        </ul>
+      </div>
+
+      <p class="section-title">4 · 信号強度は位置ではない</p>
+      <div class="article">
+        <p>App が読む信号強度（RSSI、dBm）は<strong>無線の数値</strong>です。座標ではありません。「向こうがまだ応えるか」には答えられますが、「向こうがどこにあるか」には答えられません。</p>
+        <p>そのため位置への換算はせず、位置権限も要求せず、位置履歴も残しません。このカテゴリーでよくある位置トラッキングは、ここには存在しません ── その機能自体が App にありません。</p>
+      </div>
+
+      <p class="section-title">5 · データの安全性・保持・削除</p>
+      <div class="article">
+        <ul>
+          <li><strong>端末の中。</strong>すべて App Group コンテナに書き出します。iCloud にも CloudKit にも、サーバーにも出ません。</li>
+          <li><strong>暗号化はしません。</strong>これは意図した引き換えです。平文であるかわりに「いつでも自分で開いて確かめられる」ことを選んでいます。代償として暗号化の層が 1 つないことを、ここで隠さず書いておきます。</li>
+          <li><strong>削除は簡単です。</strong>App 内の「履歴」からいつでも消せます。App を削除すればコンテナも一緒に消え、他の App が読める場所に何かが残ることはありません。</li>
+        </ul>
+      </div>
+
+      <p class="section-title">6 · 子どものプライバシー</p>
+      <div class="article">
+        <p>「いっしょ」は 13 歳未満の子どもを想定したアプリではなく、子どもの個人情報を意図的に収集することもありません。そもそも個人情報を一切収集しないので、ここに例外はありません。</p>
+      </div>
+
+      <p class="section-title">7 · あなたの権利</p>
+      <div class="article">
+        <table class="data-table">
+          <thead>
+            <tr><th>したいこと</th><th>やり方</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>保存された内容を見る</td><td>App 内の「履歴」タブに 1 件ずつ列出</td></tr>
+            <tr><td>記録を削除する</td><td>「履歴 › 記録を消去」、または App を削除する</td></tr>
+            <tr><td>権限を取り消す</td><td>システム設定 › プライバシーとセキュリティ › Bluetooth / 通知</td></tr>
+            <tr><td>別の質問をする</td><td>メールを送る（本ページの下）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="section-title">8 · App Store のプライバシーラベル</p>
+      <div class="article">
+        <p>この App の App Store プライバシーラベルは<strong>「データを収集しません」</strong>と宣言しており、本ページの内容と一致します。万一有一天食い違うことがあれば、本ページが優先です。メールでお知らせください。</p>
+      </div>
+
+      <p class="section-title">9 · ポリシーの変更</p>
+      <div class="article">
+        <p>このポリシーの内容が変わる場合は、ページ上部の発効日を書き換えます。App 内の「プライバシーと境界」も同じ内容にそろえます。収集内容に関わる変更は、App のリリースノートにも記載します。</p>
+      </div>
+
+      <div class="contact-section">
+        <h2>ご質問は？</h2>
+        <p>プライバシーに関するメールは 1 通ずつ読み、1 通ずつ返信します。</p>
+        <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ メールで問い合わせる</a>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 On Person Studio · データはあなたの端末にのみ保存されます · <a href="mailto:peer2peer.wang@gmail.com">お問い合わせ</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

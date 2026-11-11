@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On Person · Privacy Policy — nothing collected, nothing uploaded, nothing sent over the network. No location permission. Event records stay on this device, up to 50 of them.">
+  <title>Privacy Policy — On Person</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>没落下<span class="latin">On Person</span></a>
+    <nav class="lang-switch">
+      <a href="#" class="active">EN</a>
+      <a href="../zh/privacy.html">中文</a>
+      <a href="../ja/privacy.html">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">Privacy Policy</span>
+      <h1>This app doesn't touch your data</h1>
+      <p>On Person watches one Bluetooth link: the one between your Apple Watch and your iPhone. It never goes online, never collects personal information, and never asks for location. Below is exactly what it leaves on your device.</p>
+      <p class="updated">Effective 2026-11-12　·　Applies to version 1.0　·　iOS and watchOS</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html" class="active">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </nav>
+
+    <section>
+
+      <p class="section-title">1 · What we explicitly do not do</p>
+      <div class="article">
+        <ul>
+          <li><strong>No personal information is collected.</strong> No account, no email, no phone number, no device identifier, no advertising identifier (IDFA).</li>
+          <li><strong>Nothing is uploaded. Nothing goes over the network.</strong> There is no network request anywhere in the app — not a promise to refrain, the code simply isn't there.</li>
+          <li><strong>Your location is never read.</strong> No location permission, no coordinate conversion, no location history.</li>
+          <li><strong>No third-party SDKs.</strong> No analytics, no crash reporting, no ad SDK, no backend server.</li>
+        </ul>
+        <div class="note-box">
+          <strong>The one exception is the App Store purchase and restore.</strong> That step is handled entirely by Apple's own system framework (StoreKit). We never see your Apple ID, your payment details, or your bill, and we don't read them.
+        </div>
+      </div>
+
+      <p class="section-title">2 · What the app keeps on your device</p>
+      <div class="article">
+        <p>Everything lives in the local <strong>App Group container</strong> (<code>group.com.nearby.antiloss</code>), shared between the phone and the watch. Three kinds of content, all together well under a few dozen kilobytes.</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>What is stored</th><th>Why</th><th>For how long</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Event records<br>(up to 50)</td>
+              <td>So you can look back and see that it fired, that it recovered on its own, or that a quiet period swallowed it</td>
+              <td>Rolling, capped at 50 — new events push out the oldest</td>
+            </tr>
+            <tr>
+              <td>Your settings<br>(threshold, grace, quiet hours, sleep mode, theme, language)</td>
+              <td>So you don't have to set them again every time</td>
+              <td>Until you change them or uninstall the app</td>
+            </tr>
+            <tr>
+              <td>Guard status<br>(current signal, threshold, grace, last heartbeat, phone battery)</td>
+              <td>The readouts on screen</td>
+              <td>Only the <strong>current value</strong> — never a history curve</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>What an event record actually contains</h3>
+        <p>Four things and nothing more: a random ID, the moment it happened, the kind of event (nine in total — signal weak entering grace, grace ended and alert fired, recorded during a quiet period, auto-reconnect succeeded, you came back to your phone, keep guarding, started guarding, stopped guarding, make my phone ring), and one short note (for example “watch is charging”).</p>
+        <div class="note-box warn">
+          <strong>What is not in there:</strong> no coordinates, no history of where you were, no time series of signal strength, no list of your devices, no advertising identifier, no record of which apps you opened.
+        </div>
+      </div>
+
+      <p class="section-title">3 · System permissions: we ask for two things</p>
+      <div class="article">
+        <h3>Bluetooth (Always)</h3>
+        <p>The iPhone and the Apple Watch each scan for the other, and that Bluetooth link is how the app tells whether you're still together. The system's own wording is: “Used to let your watch notice when your phone is no longer in the same room as you.” Without this permission the app cannot work.</p>
+        <h3>Notifications (watch side only)</h3>
+        <p>A vibration and a notification on your wrist when you separate. You can choose to let it <strong>break through Focus modes</strong> (Time Sensitive) — but the app only uses that if you turn it on yourself in Settings; it is off by default. The system does not expose whether Focus is on, so we cannot promise the alert always gets through.</p>
+        <h3>What we never ask for</h3>
+        <ul>
+          <li>Location (Always / When In Use) — never requested</li>
+          <li>Camera, microphone, photos, contacts — never requested</li>
+          <li>Tracking (App Tracking Transparency / IDFA) — never requested, never used</li>
+          <li>Health, speech recognition, keyboard — never requested</li>
+        </ul>
+      </div>
+
+      <p class="section-title">4 · Signal strength is not a location</p>
+      <div class="article">
+        <p>The signal strength the app reads (RSSI, in dBm) is <strong>a number from a radio</strong>, not a coordinate. It answers “is that end still answering?” It cannot answer “which end is that?”</p>
+        <p>So the app does not convert anything into a position, does not request location permission, and keeps no location history. The location tracking common in this category simply isn't here — that feature isn't in the app at all.</p>
+      </div>
+
+      <p class="section-title">5 · Data security, retention and deletion</p>
+      <div class="article">
+        <ul>
+          <li><strong>On your device.</strong> Everything is written into the App Group container. Nothing goes to iCloud, nothing goes to CloudKit, nothing reaches a server.</li>
+          <li><strong>Not encrypted.</strong> That is a deliberate trade: plain text in exchange for “you can open it and check any time.” The cost is no extra layer of encryption — stated here rather than glossed over.</li>
+          <li><strong>Deletion is simple.</strong> Clear the log any time from inside the app, or uninstall it — the container goes with it, and nothing is left anywhere another app could read.</li>
+        </ul>
+      </div>
+
+      <p class="section-title">6 · Children's privacy</p>
+      <div class="article">
+        <p>On Person is not designed for children under 13, and it does not knowingly collect personal information from children. Because it collects no personal information at all, there is no exception to make here.</p>
+      </div>
+
+      <p class="section-title">7 · Your rights</p>
+      <div class="article">
+        <table class="data-table">
+          <thead>
+            <tr><th>If you want to</th><th>Do this</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>See what is stored</td><td>The History tab in the app lists every entry</td></tr>
+            <tr><td>Delete the records</td><td>History › Clear, or just uninstall the app</td></tr>
+            <tr><td>Revoke a permission</td><td>System Settings › Privacy &amp; Security › Bluetooth / Notifications</td></tr>
+            <tr><td>Ask something else</td><td>Write to us — the address is at the bottom of this page</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="section-title">8 · App Store privacy label</p>
+      <div class="article">
+        <p>This app declares <strong>“Data Not Collected”</strong> in the App Store privacy label, which matches this page. If the two ever disagree, this page wins — and please write to us so we can fix it.</p>
+      </div>
+
+      <p class="section-title">9 · Changes to this policy</p>
+      <div class="article">
+        <p>If this policy changes, we update the effective date at the top of the page and the “Privacy &amp; limits” screen inside the app. Any change that affects what gets collected is called out in the app's release notes.</p>
+      </div>
+
+      <div class="contact-section">
+        <h2>Questions?</h2>
+        <p>We read every privacy email, and we answer every one.</p>
+        <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ Email us</a>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 On Person Studio · Your data stays on your device · <a href="mailto:peer2peer.wang@gmail.com">Contact us</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

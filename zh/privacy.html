@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="没落下 · 隐私政策 —— 不收集、不上传、不联网。App 不请求位置权限，事件记录只存在这台设备上，最多 50 条。">
+  <title>隐私政策 — 没落下</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>没落下<span class="latin">On Person</span></a>
+    <nav class="lang-switch">
+      <a href="../en/privacy.html">EN</a>
+      <a href="#" class="active">中文</a>
+      <a href="../ja/privacy.html">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">隐私政策</span>
+      <h1>这个 App 不碰你的数据</h1>
+      <p>没落下看的是 Apple Watch 和 iPhone 之间那条蓝牙链路。它不联网、不收集个人信息、不请求位置权限。下面写的是它到底在你设备上留了什么。</p>
+      <p class="updated">生效日期 2026-11-12　·　适用版本 1.0　·　适用于 iOS 与 watchOS</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html" class="active">隐私政策</a>
+      <a href="support.html">帮助中心</a>
+    </nav>
+
+    <section>
+
+      <p class="section-title">1 · 我们明确不做的事</p>
+      <div class="article">
+        <ul>
+          <li><strong>不收集个人信息。</strong>没有账号，没有邮箱，没有手机号，没有设备标识符，没有广告标识符（IDFA）。</li>
+          <li><strong>不上传、不联网。</strong>App 的代码里没有任何一处网络请求 —— 不是「承诺不传」，是那段代码不存在。</li>
+          <li><strong>不读位置。</strong>不请求位置权限，不换算坐标，不存位置历史。</li>
+          <li><strong>没有第三方 SDK。</strong>没有分析统计、没有崩溃上报、没有广告 SDK、没有后台服务器。</li>
+        </ul>
+        <div class="note-box">
+          <strong>唯一的例外是 App Store 的购买与恢复购买。</strong>那一步完全由 Apple 的系统框架（StoreKit）完成，我们看不到你的 Apple ID、支付信息或账单，也不读它们。
+        </div>
+      </div>
+
+      <p class="section-title">2 · App 在你这台设备上记了什么</p>
+      <div class="article">
+        <p>全部存在设备本地的 <strong>App Group 容器</strong>（<code>group.com.nearby.antiloss</code>）里，App 与手表端共用这一份。下面三类内容，加起来不超过几十 KB。</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>记什么</th><th>为什么</th><th>留多久</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>事件记录<br>（最多 50 条）</td>
+              <td>让你回看「它响了」「它自己恢复了」「这次被静默了」</td>
+              <td>滚动保留，上限 50 条，新记录顶掉最旧的一条</td>
+            </tr>
+            <tr>
+              <td>你的设置<br>（阈值、宽限、静默时段、睡眠模式、主题、语言）</td>
+              <td>记住你的偏好，不用每次重设</td>
+              <td>直到你改掉或卸载 App</td>
+            </tr>
+            <tr>
+              <td>守护状态<br>（当前信号强度、阈值、宽限、最后心跳、手机电量）</td>
+              <td>界面上的读数</td>
+              <td>只记<strong>当前值</strong>，不是历史曲线</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>事件记录里具体有什么</h3>
+        <p>每条记录只有四样东西：一条随机 ID、发生时刻、事件类型（一共九种：信号弱进入宽限、宽限结束报警、静默期内记录、自动重连成功、你已回到手机旁、继续守、开始守护、停止守护、让手机响）、以及一句补充说明（例如「手表充电中」）。</p>
+        <div class="note-box warn">
+          <strong>里面没有：</strong>位置坐标、没有你在哪里的历史、没有信号强度的时间序列、没有设备清单、没有广告标识符、没有你打开过什么 App 的记录。
+        </div>
+      </div>
+
+      <p class="section-title">3 · 系统权限：只问两件事</p>
+      <div class="article">
+        <h3>蓝牙（始终）</h3>
+        <p>iPhone 与 Apple Watch 各自扫描对方，靠这条蓝牙链路判断「还在不在一起」。系统的用途说明原文是：「用于在你离开手机时，让手表发现手机不再与你同处一室。」不申请这项权限，App 就无法工作。</p>
+        <h3>通知（仅手表端）</h3>
+        <p>分离时在手腕上震动并弹出通知。你可以选择让它<strong>穿透专注模式</strong>（时间敏感通知）—— 但只有你自己在系统设置里打开这个开关，App 才会使用它；默认不用。系统专注模式开着的时候，我们读不到它开没开，所以不能承诺一定送达到。</p>
+        <h3>不申请的权限</h3>
+        <ul>
+          <li>位置（始终 / 使用期间）—— 不申请</li>
+          <li>摄像头、麦克风、照片、通讯录 —— 不申请</li>
+          <li>追踪（App Tracking Transparency / IDFA）—— 不申请，也不用</li>
+          <li>健康、语音识别、键盘 —— 不申请</li>
+        </ul>
+      </div>
+
+      <p class="section-title">4 · 「信号强度」不是位置</p>
+      <div class="article">
+        <p>App 读到的信号强度（RSSI，单位 dBm）是<strong>无线电信号的一个数值</strong>，不是坐标。它能回答「那头还有没有回应」，回答不了「那头是哪」。</p>
+        <p>所以 App 不换算位置、不请求位置权限、不留任何位置历史。这类产品里常见的「位置追踪」，我们没有 —— App 里也没有那个功能。</p>
+      </div>
+
+      <p class="section-title">5 · 数据安全、保留与删除</p>
+      <div class="article">
+        <ul>
+          <li><strong>在本机。</strong>所有内容都写在 App Group 容器里，不写 iCloud、不写 CloudKit、不上传任何服务器。</li>
+          <li><strong>不加密。</strong>这是有意的取舍：明文换取「你随时能自己打开核对」。代价是没有额外一层加密保护 —— 这一点写在这里，不假装有。</li>
+          <li><strong>删除很简单。</strong>App 内「记录」页可以随时清空；卸载 App 时整个容器一起删除，不会留下任何残留在别的 App 能读到的地方。</li>
+        </ul>
+      </div>
+
+      <p class="section-title">6 · 儿童隐私</p>
+      <div class="article">
+        <p>没落下不面向 13 岁以下的儿童设计，也不 knowingly 收集儿童的个人信息。因为它压根不收集个人信息，所以这一条没有例外情况。</p>
+      </div>
+
+      <p class="section-title">7 · 你的权利</p>
+      <div class="article">
+        <table class="data-table">
+          <thead>
+            <tr><th>你想做的事</th><th>怎么做</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>查看记了什么</td><td>App 内「记录」页，逐条列出</td></tr>
+            <tr><td>删掉记录</td><td>App 内「记录 › 清空记录」，或直接卸载 App</td></tr>
+            <tr><td>撤回权限</td><td>系统设置 › 隐私与安全性 › 蓝牙 / 通知里关掉</td></tr>
+            <tr><td>问一个别的问题</td><td>写信给我们，见页面底部</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="section-title">8 · App Store 隐私标签</p>
+      <div class="article">
+        <p>本 App 在 App Store 的隐私标签中声明为<strong>「不收集数据」</strong>，与本页内容一致。若两者出现不一致，以本页为准并请写信告诉我们。</p>
+      </div>
+
+      <p class="section-title">9 · 政策变更</p>
+      <div class="article">
+        <p>如果这份政策有改动，本页顶部的生效日期会随之改动，App 内「隐私与边界」那一屏也会同步。改动涉及收集范围时，会在 App 的版本说明里写明。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="contact-section">
+        <h2>有问题？</h2>
+        <p>隐私相关的每封邮件我们都会读，也都会回。</p>
+        <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ 发邮件给我们</a>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 没落下 On Person Studio · 数据只存在你自己的设备上 · <a href="mailto:peer2peer.wang@gmail.com">联系我们</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
