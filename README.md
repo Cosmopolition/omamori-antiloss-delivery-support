@@ -5,6 +5,10 @@ App Store 的「隐私政策网址」与「支持网址」都指向这里。
 
 > 站点源码在本目录，但**它自己是一个独立的 Git 仓库**（有独立的 `.git` 与 remote）——
 > 与 `eyecare/support` 同一个做法：内容要单独推到一个 public 仓库才能被 Pages 托管。
+>
+> * 仓库：`Cosmopolition/omamori-antiloss-delivery-support`（**public**，Pages 托管）
+> * 在主仓库 `Cosmopolition/omamori-antiloss-delivery`（**private**）里，它以 **git submodule** 挂载
+>   （主仓库的 `.gitmodules`），克隆主仓库要加 `--recurse-submodules` 才会把站点一起拉下来。
 
 ---
 
@@ -32,9 +36,9 @@ support/
 
 | 本地化 | 隐私政策 | 支持 |
 |---|---|---|
-| zh-Hans | `https://cosmopolition.github.io/onperson-support/zh/privacy.html` | `https://cosmopolition.github.io/onperson-support/zh/support.html` |
-| en-US | `https://cosmopolition.github.io/onperson-support/en/privacy.html` | `https://cosmopolition.github.io/onperson-support/en/support.html` |
-| ja | `https://cosmopolition.github.io/onperson-support/ja/privacy.html` | `https://cosmopolition.github.io/onperson-support/ja/support.html` |
+| zh-Hans | `https://cosmopolition.github.io/omamori-antiloss-delivery-support/zh/privacy.html` | `https://cosmopolition.github.io/omamori-antiloss-delivery-support/zh/support.html` |
+| en-US | `https://cosmopolition.github.io/omamori-antiloss-delivery-support/en/privacy.html` | `https://cosmopolition.github.io/omamori-antiloss-delivery-support/en/support.html` |
+| ja | `https://cosmopolition.github.io/omamori-antiloss-delivery-support/ja/privacy.html` | `https://cosmopolition.github.io/omamori-antiloss-delivery-support/ja/support.html` |
 
 根路径的 `privacy.html` / `support.html` / `index.html` 按 `navigator.language` 自动分流
 （`ja*` → ja/、`zh*` → zh/、其余 → en/），给「用户自己敲域名」和 App 内 WebView 用。
@@ -52,8 +56,9 @@ support/
 
 * **零收集、零上传** —— 全部 App 源码里没有一处 `URLSession` / `URLRequest` / 网络框架链接；
   不是「承诺不传」，是那段代码不存在。唯一例外是 App Store 的购买与恢复购买（走 StoreKit）。
-* **只问两个权限** —— 蓝牙（始终，Info.plist 的 `NSBluetoothAlwaysUsageDescription` 原文照抄）
-  与通知（**仅手表端**，`WatchNotificationService.requestAuthorization`）。
+* **只问三个权限** —— 蓝牙（始终，Info.plist 的 `NSBluetoothAlwaysUsageDescription` 原文照抄）、
+  本地网络（**仅 iPhone 端**，`NSLocalNetworkUsageDescription`，用于手机与手表之间的本地直连）、
+  通知（**仅手表端**，`WatchNotificationService.requestAuthorization`）。
   位置 / 摄像头 / 麦克风 / 追踪（ATT）/ 健康 / 键盘 —— 全部不申请。
 * **记了什么，有一张表** —— 事件记录（≤50 条）、设置、守护状态（当前值，不是历史），
   全在 App Group 容器 `group.com.nearby.antiloss`（`Shared/Store/SharedStore.swift`）。
@@ -116,7 +121,7 @@ support/
 
 1. 把仓库设为 **public**
 2. **Settings → Pages** → Source 选 `main` branch、`/ (root)` 目录 → Save
-3. 站点会在 `https://cosmopolition.github.io/onperson-support/` 上线
+3. 站点会在 `https://cosmopolition.github.io/omamori-antiloss-delivery-support/` 上线
 
 ### 推送到 GitHub
 

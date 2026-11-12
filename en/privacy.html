@@ -82,10 +82,13 @@
         </div>
       </div>
 
-      <p class="section-title">3 · System permissions: we ask for two things</p>
+      <p class="section-title">3 · System permissions: we ask for three things</p>
       <div class="article">
         <h3>Bluetooth (Always)</h3>
         <p>The iPhone and the Apple Watch each scan for the other, and that Bluetooth link is how the app tells whether you're still together. The system's own wording is: “Used to let your watch notice when your phone is no longer in the same room as you.” Without this permission the app cannot work.</p>
+        <h3>Local Network (iPhone side)</h3>
+        <p>The iPhone and the Apple Watch talk to each other over a <strong>direct local link</strong>, and the system asks once for “Allow … to use wireless data?”. Our usage string is: “Used to sync guard status and settings between your iPhone and Apple Watch; device-to-device traffic stays on the local link and never goes through a server.” Without it, status and settings cannot travel between phone and watch.</p>
+        <p>⚠️ Measured on iOS 27: the system dialog shows <strong>the system's own wording</strong>; our usage string does not appear in it. This is written the way the system actually behaves rather than pretending we can change it.</p>
         <h3>Notifications (watch side only)</h3>
         <p>A vibration and a notification on your wrist when you separate. You can choose to let it <strong>break through Focus modes</strong> (Time Sensitive) — but the app only uses that if you turn it on yourself in Settings; it is off by default. The system does not expose whether Focus is on, so we cannot promise the alert always gets through.</p>
         <h3>What we never ask for</h3>
@@ -126,7 +129,7 @@
           <tbody>
             <tr><td>See what is stored</td><td>The History tab in the app lists every entry</td></tr>
             <tr><td>Delete the records</td><td>History › Clear, or just uninstall the app</td></tr>
-            <tr><td>Revoke a permission</td><td>System Settings › Privacy &amp; Security › Bluetooth / Notifications</td></tr>
+            <tr><td>Revoke a permission</td><td>System Settings › Privacy &amp; Security › Bluetooth / Local Network / Notifications</td></tr>
             <tr><td>Ask something else</td><td>Write to us — the address is at the bottom of this page</td></tr>
           </tbody>
         </table>
